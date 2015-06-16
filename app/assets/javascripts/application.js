@@ -14,3 +14,20 @@
 //= require jquery_ujs
 //= require d3
 //= require_tree .
+
+function updateCourse() {
+  var button = document.getElementsByName("commit");
+  button[0].disabled = true;
+}
+
+window.onload = function(){
+  var section = document.getElementsByClassName("association container");
+  var last = section[section.length - 1];
+  last.style.display = "none";
+}
+
+function showNewGrade() {
+  var section = document.getElementsByClassName("association container");
+  var last = section[section.length - 1];
+  last.style.display = "block";
+}
