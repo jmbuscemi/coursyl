@@ -33,9 +33,8 @@ function showNewGrade(){
 }
 
 function hideSection(element){
-  console.log(element.parentElement.parentElement);
-  var hideRow = element.parentElement.parentElement;
+  var hideRow = element.parentElement.parentElement.parentElement;
+  var markDestroy = element.parentElement.lastElementChild;
   hideRow.style.display = "none";
-  //find div of hidden object and set .checked=true;
-  //hidden value is the lastChild of the element.parentElement
+  markDestroy.checked = true;
 }
