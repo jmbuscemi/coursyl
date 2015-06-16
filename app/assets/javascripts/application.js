@@ -15,7 +15,7 @@
 //= require d3
 //= require_tree .
 
-function updateCourse() {
+function updateCourse(){
   var button = document.getElementsByName("commit");
   button[0].disabled = true;
 }
@@ -26,8 +26,16 @@ window.onload = function(){
   last.style.display = "none";
 }
 
-function showNewGrade() {
+function showNewGrade(){
   var section = document.getElementsByClassName("association container");
   var last = section[section.length - 1];
   last.style.display = "block";
+}
+
+function hideSection(element){
+  console.log(element.parentElement.parentElement);
+  var hideRow = element.parentElement.parentElement;
+  hideRow.style.display = "none";
+  //find div of hidden object and set .checked=true;
+  //hidden value is the lastChild of the element.parentElement
 }
