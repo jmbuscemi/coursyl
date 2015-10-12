@@ -17,6 +17,7 @@
 
 function updateCourse(){
   var button = document.getElementsByName("commit");
+  // var button = event.target
   button[0].disabled = true;
 }
 
@@ -26,15 +27,21 @@ window.onload = function(){
   last.style.display = "none";
 }
 
+// function hideLastGrade(){
+//   buttons = document.getElementsByClassName("new-association");
+//   b = buttons[0];
+//   b.addEventListener("click", function() {alert ("box1!")} );
+// }
+
 function showNewGrade(){
   var section = document.getElementsByClassName("association container");
   var last = section[section.length - 1];
   last.style.display = "block";
 }
 
-function hideSection(element){
-  var hideRow = element.parentElement.parentElement.parentElement;
-  var markDestroy = element.parentElement.lastElementChild;
+function hideSection(){
+  var hideRow = event.target.parentElement.parentElement.parentElement;
+  var markDestroy = event.target.parentElement.lastElementChild;
   hideRow.style.display = "none";
   markDestroy.checked = true;
 }
