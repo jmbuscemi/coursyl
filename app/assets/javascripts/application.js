@@ -27,6 +27,21 @@ window.onload = function(){
   last.style.display = "none";
 }
 
+// Scrolls to the selected menu item on the page
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html,body').animate({
+            scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
 // function hideLastGrade(){
 //   buttons = document.getElementsByClassName("new-association");
 //   b = buttons[0];
