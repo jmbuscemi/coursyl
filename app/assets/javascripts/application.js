@@ -15,10 +15,9 @@
 //= require d3
 //= require_tree .
 
-function updateCourse(){
-  var button = document.getElementsByName("commit");
-  // var button = event.target
-  button[0].disabled = true;
+function updateCourse(button){
+  button.disabled = true;
+  button.form.submit();
 }
 
 window.onload = function(){
