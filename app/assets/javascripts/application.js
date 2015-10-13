@@ -27,6 +27,19 @@ window.onload = function(){
   last.style.display = "none";
 }
 
+function showNewGrade(){
+  var section = document.getElementsByClassName("association container");
+  var last = section[section.length - 1];
+  last.style.display = "block";
+}
+
+function hideSection(){
+  var hideRow = event.target.parentElement.parentElement.parentElement;
+  var markDestroy = event.target.parentElement.lastElementChild;
+  hideRow.style.display = "none";
+  markDestroy.checked = true;
+}
+
 // Scrolls to the selected menu item on the page
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
@@ -42,16 +55,3 @@ $(function() {
     }
   });
 });
-
-function showNewGrade(){
-  var section = document.getElementsByClassName("association container");
-  var last = section[section.length - 1];
-  last.style.display = "block";
-}
-
-function hideSection(){
-  var hideRow = event.target.parentElement.parentElement.parentElement;
-  var markDestroy = event.target.parentElement.lastElementChild;
-  hideRow.style.display = "none";
-  markDestroy.checked = true;
-}
