@@ -21,20 +21,20 @@ function updateCourse(button){
 }
 
 window.onload = function(){
-  var section = document.getElementsByClassName("association container");
+  var section = document.getElementsByClassName("association");
   var last = section[section.length - 1];
   last.style.display = "none";
 }
 
 function showNewGrade(){
-  var section = document.getElementsByClassName("association container");
+  var section = document.getElementsByClassName("association");
   var last = section[section.length - 1];
   last.style.display = "block";
 }
 
-function hideSection(){
-  var hideRow = event.target.parentElement.parentElement.parentElement;
-  var markDestroy = event.target.parentElement.lastElementChild;
+function hideSection(button){
+  var hideRow = button.parentElement.parentElement.parentElement;
+  var markDestroy = button.parentElement.lastElementChild;
   hideRow.style.display = "none";
   markDestroy.checked = true;
 }
