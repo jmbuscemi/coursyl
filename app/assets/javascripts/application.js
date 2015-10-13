@@ -42,11 +42,6 @@ $(function() {
     }
   });
 });
-// function hideLastGrade(){
-//   buttons = document.getElementsByClassName("new-association");
-//   b = buttons[0];
-//   b.addEventListener("click", function() {alert ("box1!")} );
-// }
 
 function showNewGrade(){
   var section = document.getElementsByClassName("association container");
